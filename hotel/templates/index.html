@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media = "screen and (max-width: 768px)" href="{% static 'css/mobile.css' %}">
+    <title>HOTEL BT | WELCOME</title>
+</head>
+<body>
+    <header>
+        <nav id = "navbar">
+            <div class="container" >  
+                <h1 class = "logo"><a href = "{% url 'home' %}">Royal Hotel</a></h1>
+                <h2 id="burger" onclick="openNav()">&#8801;</h2>
+                <ul id="nav-item">
+                    <li>
+                        <a class ="current" href ="{% url 'home' %}"> Home <i class="fas fa-angle-down"></i></a>
+                        <ul class ="nested">
+                            <li><a href = "#">lodge and lounge</a></li>
+                            <li><a href = "#">Payments</a></li>
+                            <li><a href = "#">Bookings</a></li>
+                            <li><a href = "#">services</a></li>
+                        </ul>
+                    </li>
+                            <li><a href = "{% url 'about' %}">About</a></li>
+                            <li><a href = "{% url 'contact_view' %}">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="showcase">
+            <div class="container-letter">
+                <div class="content">
+                    <h1><span class = "enjoy">Enjoy</span> Your Stay</h1>
+                    <p class = "lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cumque eligendi sint accusamus repudiandae eum.
+                    </p>
+                    <a class="btn" href = "{% url 'about' %}">About Our Hotel</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="write-up">
+        <div class="img-write"></div>
+        <div class="write">
+            <h2><span class = "enjoy">The history</span> of our hotel</h2>
+            <p class = "about-hotel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nihil explicabo ipsum tempora soluta amet laborum recusandae magnam iusto aliquid.
+            </p>
+            <a class = "btn btn-primary" href="{% url 'about' %}">Read More</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="box lightbox"> 
+            <i class="fas fa-hotel fa-3x"></i>
+            <h3>Great Location</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quis ratione repudiandae dolorum mollitia impedit.
+            </p>
+        </div>
+        <div class="box darkbox " >
+            <i class="fas fa-utensils fa-3x"></i>
+            <h3 >Free Meals</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quis ratione repudiandae dolorum mollitia impedit.
+            </p>
+        </div>
+        <div class="box lightbox">
+            <i class="fas fa-dumbbell fa-3x"></i>
+            <h3>Fitness Room</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quis ratione repudiandae dolorum mollitia impedit.
+            </p>
+        </div>
+
+        <div class="clr"></div>
+
+    </section>
+    <footer id="main-footer">
+        <p>Hotel | BT &copy; Copyright 2022</p>
+    </footer>
+
+    <script src="app.js" type="text/javascript"> </script>
+    
+</body>
+</html>

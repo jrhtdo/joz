@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media = "screen and (max-width: 768px)" href="{% static 'css/mobile.css' %}">
+    <!-- <meta name="description" content="" -->
+    <title>HOTEL BT | ABOUT</title>
+</head>
+<body>
+    <header>
+        <nav id = "navbar">
+            <div class="container" >  
+                <h1 class = "logo"><a href = "{% url 'home' %}">HBT</a></h1>
+                <ul id="nav-item">
+                    <li><a href = "{% url 'home' %}">Home</a></li>
+                    <li><a class = "current" href = "{% url 'about' %}">About</a></li>
+                    <li><a  href = "{% url 'contact_view' %}">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id = "about-info" class = "lightbox pad-x">
+        <div class="container-right">
+            <div class="about-left">
+                <h3 class = "large"><span class = "enjoy">About</span> Hotel BT</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt ab vero ullam aliquam hic perspiciatis? Repellendus quos, saepe fugiat unde iusto laborum deleniti nobis esse fugit voluptatem vero eos.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo repellat unde asperiores non consectetur ratione doloribus sapiente vitae impedit mollitia.
+                </p>
+            </div>
+            <div class="about-right">
+                <img src = "{% static 'img/photo-2.jpg' %}" alt = "Hotel">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial">
+        <div class="container">
+            <h2 class = "large">What Our Guests Say</h2>
+            <div class="darkbox">
+                <div class="test-1">
+                    <img src = "{% static 'img/person-1.jpg' %}" alt = "sikira">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nisi vel aut veritatis vitae quos neque odio! Accusantium, voluptas facilis!
+                    </p>
+                </div>
+            </div>
+            <div class="darkbox">
+                    <div class="test-2">
+                            <img src = "{% static 'img/person-2.jpg' %}" alt = "sikira">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nisi vel aut veritatis vitae quos neque odio! Accusantium, voluptas facilis!
+                            </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <div class="clr"></div>
+
+    <footer id="main-footer">
+        <p>Hotel | BT &copy; Copyright 2022</p>
+    </footer>
+    
+</body>
+</html>
